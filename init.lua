@@ -1,2 +1,3 @@
+require("config.options")
 require("config.lazy")
-vim.opt.syntax = "on"
+require("config.keymap")
