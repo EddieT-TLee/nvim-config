@@ -19,6 +19,7 @@ return {
     "neovim/nvim-lspconfig",
     config = function()
       vim.lsp.enable({ "lua_ls", "omnisharp", "clangd" })
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Action" })
     end,
   },
 }
