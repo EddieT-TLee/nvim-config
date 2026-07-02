@@ -1,3 +1,8 @@
+-- Tab Management
+vim.keymap.set("n", "<C-l>", "<cmd>BufferNext<cr>", { desc = "Next buffer" })
+vim.keymap.set("n", "<C-h>", "<cmd>BufferPrevious<cr>", { desc = "Previous buffer" })
+vim.keymap.set("n", "<leader>tc", "<cmd>BufferClose<cr>", { desc = "Close buffer" })
+
 -- Diagnostic keymaps
 vim.keymap.set("n", "<leader>e", vim.diagnostic.open_float, { desc = "Show diagnostic" })
 vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, { desc = "Previous diagnostic" })
