@@ -18,5 +18,8 @@ vim.keymap.set("n", "<leader>fh", "<cmd>Telescope help_tags<cr>", { desc = "Tele
 -- LSP
 vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Action" })
 
+-- Oil
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+
 -- LazyGit -- Not needed just in case I forgor
 -- { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
