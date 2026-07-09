@@ -21,5 +21,17 @@ vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, { desc = "LSP Code Ac
 -- Oil
 vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
 
+-- Debugging
+vim.keymap.set("n", "<leader>b", function()
+	require("dap").toggle_breakpoint()
+end, { desc = "Toggle breakpoint" })
+
+vim.keymap.set("n", "<leader>dc", function()
+	require("dap").continue()
+end, { desc = "Continue" })
+
+vim.keymap.set("n", "<leader>B", function()
+	require("dap").set_breakpoint()
+end, { desc = "Set breakpoint" })
 -- LazyGit -- Not needed just in case I forgor
 -- { "<leader>lg", "<cmd>LazyGit<cr>", desc = "LazyGit" },
