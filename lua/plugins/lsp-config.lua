@@ -8,7 +8,7 @@ return {
 	{
 		"mason-org/mason-lspconfig.nvim",
 		opts = {
-			ensure_installed = { "lua_ls", "omnisharp", "clangd" },
+			ensure_installed = { "lua_ls", "clangd" },
 		},
 		dependencies = {
 			{ "mason-org/mason.nvim", opts = {} },
@@ -25,12 +25,15 @@ return {
 				capabilities = capabilities,
 			})
 
-			vim.lsp.config("omnisharp", {
-				cmd = { "omnisharp" },
+			vim.lsp.config("roslyn", {
 				capabilities = capabilities,
 				settings = {
-					omnisharp = {
-						useModernNet = false,
+					["csharp|inlay_hints"] = {
+						csharp_enable_inlay_hints_for_implicit_object_creation = true,
+						csharp_enable_inlay_hints_for_implicit_variable_types = true,
+					},
+					["csharp|code_lens"] = {
+						dotnet_enable_references_code_lens = true,
 					},
 				},
 			})
