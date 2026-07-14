@@ -42,6 +42,9 @@ return {
 				capabilities = capabilities,
 			})
 
+			vim.lsp.config("gdscript", {
+				capabilities = capabilities,
+			})
 			vim.lsp.enable({ "lua_ls", "omnisharp", "clangd" })
 		end,
 	},
